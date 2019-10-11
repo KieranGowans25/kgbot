@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+   <category>
+        <pattern>hello</pattern>
+        <template>       
+           Hi there, what is your name, please state: My name is..? 
+        </template>
+    </category>
+	
+	<category>
+        <pattern>Hi</pattern>
+        <template>       
+           <srai>hello</srai> 
+        </template>
+    </category>
+	
+	<category>
+        <pattern>my name is *</pattern>
+        <template>       
+            <think><set name = "username"> <star/></set></think>
+        Hello!<get name = "username"/> , 
+		Please select from list?.     
+		<ul>
+            <li>1) Holidays</li>
+			<li>2) Information</li>
+            <li>3) Top Courses </li>          
+        </ul>
+		
+        </template>
+	</category>
+	
+	<category>
+        <pattern>Main Menu</pattern>
+        <template>       
+         Please select from list?.     
+		<ul>
+            <li>1) Holidays </li>
+            <li>2) Funding </li>
+            <li>3) Top Courses </li>
+        </ul>
+			
+        </template>
+    </category>
+
+	<category>
+        <pattern>1)</pattern>
+        <template>       
+            Hello<get name = "username"/>  Here are the OSI Layers...
+        <ul>
+            <li> Winter break starts 20th December 2019 - 7th January 2020.</li>
+            <li> Easter break starts 3rd April 2020 - 20th April 2020.</li>
+            <li> Summer break starts 26th June 2020 - 18th August 2020.</li>
+        </ul>
+	
+	Type; Main Menu to Return
+        </template>
+    </category>
+	
+	<category>
+        <pattern>2)</pattern>
+        <template> 
+        <ul>
+            <li> For students attending HNC and above courses please
+				visit the Scottish Awards Agency for Scotland (SAAS) website</li>
+            <li> For students that are sitting lower than HNC are intitled to EMA allowance</li>
+            </ul>
+			Type; Main Menu to Return
+        </template>
+    </category>
+	
+	<category>
+        <pattern>3)</pattern>
+        <template>  
+        <ul>
+        <li> Highly rated computing courses range from HNC Cyber security to HND networking.</li>
+        <li> Sports and fitness courses range from HNC coaching and development to HND Fitness, Health and Exercise.</li>
+        <li> Engineering courses range from NC Electrical Engineering to HNC Engineering Systems.</li>
+        Type; Main Menu to Return
+        </ul>
+			
+        </template>
+    </category>
+	 	
+	<category>
+      <pattern>I LIKE *</pattern>
+      <template>
+         I like <star/> too<get name = "username"/>.
+      </template>
+    </category>
+   
+    <category>
+      <pattern>repeat after me *</pattern>
+      <template>
+         <star/> 
+      </template>
+    </category>
+    <category>
+        <pattern>*</pattern>
+        <template>       
+            I don't have an answer for that. Please Type; Main Menu
+        </template>
+    </category>
+    
+</aiml>
